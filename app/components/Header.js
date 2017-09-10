@@ -17,10 +17,10 @@ export default class Header extends React.Component {
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav"></ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="nav-item"><NavLink to="/" className="nav-link" style={{paddingTop: 25}}>Search</NavLink></li>
+                            <li className="nav-item"><NavLink to="/" className="nav-link" style={{paddingTop: 20}}>Search</NavLink></li>
 
                             <li className="nav-item">
-                            <form onSubmit={this.props.reset} action="/reset" className="nav-link"><button type="submit" className="btn btn-danger">Reset</button></form>
+                            <form onSubmit={this.props.reset} action="/reset" className="nav-link"><button type="submit" className="btn btn-danger" style={{marginTop: 12, marginRight: 10, marginBottom:10}}>Reset</button></form>
                             </li>
                         </ul>
                     </div>
