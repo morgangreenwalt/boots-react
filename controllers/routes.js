@@ -57,6 +57,17 @@ app.get("/data", function(req, res) {
     });
 });
 
+// Route to get all boots data
+app.get("/", function(req, res) {
+    Boot.find({}, function(err, data) {
+    if (err) {
+        throw err;
+    } else {
+        res.send(data);
+    }
+    });
+});
+
 // Route to get all boots that are unwatched
 app.get("/watching", function(req, res) {
     Boot.find({ watch: true }, function(err, data) {
@@ -68,28 +79,28 @@ app.get("/watching", function(req, res) {
     });
 });
 
-// Route to update a boot to "watched"
-app.post("/watching/:id", function(req, res) {
-    Boot.update({ _id: req.params.id }, { $set: { watch: true }}, function(err, data) {
-    if (err) {
-        throw err;
-    } else {
-        res.redirect("/");
-    }
-    });
-});
+// // Route to update a boot to "watched"
+// app.post("/watching/:id", function(req, res) {
+//     Boot.update({ _id: req.params.id }, { $set: { watch: true }}, function(err, data) {
+//     if (err) {
+//         throw err;
+//     } else {
+//         res.redirect("/");
+//     }
+//     });
+// });
 
 
-// Route to update a boot to "unwatched"
-app.post("/unwatch/:id", function(req, res) {
-    Boot.update({ _id: req.params.id }, { $set: { watch: false }}, function(err, data) {
-    if (err) {
-        throw err;
-    } else {
-        res.redirect("/");
-    }
-    });
-});
+// // Route to update a boot to "unwatched"
+// app.post("/unwatch/:id", function(req, res) {
+//     Boot.update({ _id: req.params.id }, { $set: { watch: false }}, function(err, data) {
+//     if (err) {
+//         throw err;
+//     } else {
+//         res.redirect("/");
+//     }
+//     });
+// });
 
 // Route to reset filter & db collection
 app.post("/reset", function(req, res) {
