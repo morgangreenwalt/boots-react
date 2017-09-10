@@ -27,12 +27,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 // mLab Heroku Connection
-// mongoose.connect("mongodb://heroku_9jhj5q71:uce5pd3fcgh60kbgf996v38116@ds051883.mlab.com:51883/heroku_9jhj5q71");
-// var db = mongoose.connection;
+mongoose.connect("mongodb://heroku_73sw5d1s:j1f5g4f7m1v3rvu7bfamvq26i1@ds129344.mlab.com:29344/heroku_73sw5d1s");
+var db = mongoose.connection;
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/boot_scraper_R");
-var db = mongoose.connection;
+// mongoose.connect("mongodb://localhost/boot_scraper_R");
+// var db = mongoose.connection;
 
 // Require in routes
 require("./controllers/routes.js")(app);
