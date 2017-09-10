@@ -20,7 +20,7 @@ export default class Header extends React.Component {
                             <li className="nav-item"><NavLink to="/" className="nav-link" style={{paddingTop: 20}}>Search</NavLink></li>
 
                             <li className="nav-item">
-                            <form onSubmit={this.props.reset} action="/reset" className="nav-link"><button type="submit" className="btn btn-danger" style={{marginTop: 12, marginRight: 10, marginBottom:10}}>Reset</button></form>
+                            <form onSubmit={this.props.reset} action="/reset" className="nav-link"><button type="submit" className="btn btn-danger reset-btn">Reset</button></form>
                             </li>
                         </ul>
                     </div>
