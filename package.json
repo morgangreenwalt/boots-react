@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/morgangreenwalt/react-scraper.git"
+        "url": "git+https://github.com/morgangreenwalt/boots-react.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/morgangreenwalt/react-scraper/issues"
+        "url": "https://github.com/morgangreenwalt/boots-react/issues"
     },
-    "homepage": "https://github.com/morgangreenwalt/react-scraper#readme",
+    "homepage": "https://github.com/morgangreenwalt/boots-react#readme",
     "dependencies": {
         "axios": "^0.16.2",
         "body-parser": "^1.17.2",
